@@ -1,0 +1,17 @@
+{
+	"name": "Salesforce Character Counter",
+	"description": "Count the number of characters in knowledge editor",
+	"version": "1.0",
+	"permissions": [
+		"activeTab"
+	],
+	"page_action": {
+          "default_title": "Salesforce Counter"
+	},
+	"content_scripts": [{
+		"matches": ["https://*.salesforce.com/knowledge/*"],
+		"js": ["jquery.min.js", "content_script.js"],
+		"run_at": "document_end"
+	}],
+	"manifest_version": 2
+}
